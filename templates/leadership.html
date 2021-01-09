@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<title>Jaewon's Library Redesign</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/51d20c5746.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/leadership.css') }}">
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="/" class="w3-bar-item w3-button">HOME</a>
+            <a href="/#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>
+                ABOUT</a>
+            <a href="/#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>
+                PORTFOLIO</a>
+            <a href="/#contacts" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>
+                CONTACTS</a>
+            <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"> -->
+            <!-- <i class="fa fa-search"></i> -->
+            </a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-dark-grey w3-hide w3-hide-large w3-hide-medium">
+            <a href="/#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="/#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+            <a href="/#contacts" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACTS</a>
+            <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
+        </div>
+    </div>
+
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h1 id="aboutMe">Project Overview</h1>
+        <!-- <p class="w3-center"><em>Experience Architecture</em></p> -->
+        <p>
+        <h1>Lead Innovation Activity</h1>
+        <span>What is the goal for this session?</span><br> The goal for this session is geared towards solving a problem
+        for a group based in San Jose, California. They are a non-profit organization focusing on coding for the city of
+        San Jose. A member reached out to me and asked for help regarding this specific problem they were facing.
+        <br><br>
+
+        <span>What are the needs of the group? 
+        </span><br>The group was focused on the task presented by me. Many of the group members did not know each other so it was a slight challenge to get everyone on board with the presented problem but they got into the groove of working together fairly quickly.
+        <br><br>
+
+        <span>My Role:</span> Facilitation, leading, and directing the movement of the activity.<br>
+
+
+        There was 3 distinct spaces and clients that I had to work with along with my team to meet their requirements
+        and redesign the space.
+
+
+
+        </p>
+
+
+    </div>
+
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h1 id="aboutMeRoku">Deliverable</h1>
+        <!-- <p class="w3-center"><em>Experience Architecture</em></p> -->
+
+
+        <br>
+        <a href="https://drive.google.com/file/d/1TuPD9q6uDBFYfLB0bidbHSdlNUefh7fm/view?usp=sharing" download="Jaewon Lee Gaming Magazine" target="_blank">
+            <h2>Link to report</h2></a>
+          <div id="consentImg">
+              
+              <img id="module" src="{{ url_for('static', filename='images/module.jpg') }}" class="w3-round w3-image" alt="Photo of Me"><br>
+  
+              <img id="consentForm" src="{{ url_for('static', filename='images/lidClosing.PNG') }}" class="w3-round w3-image" alt="Photo of Me"><br>
+  
+          </div><br>
+        <br>
+
+
+        </p>
+
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="footer" class="w3-right w3-padding-64 w3-opacity">
+
+        <a href="#about" class="w3-button  w3-light-grey"><i class="fa fa-arrow-up w3-center"></i></a>
+
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                // navbar.className="w3-card w3-animate-top w3-dark-grey"
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-dark-grey";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-dark-grey", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

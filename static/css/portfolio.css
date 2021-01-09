@@ -1,0 +1,320 @@
+/* Jaewon's CSS for 210 portfolio */
+
+@import "compass/css3";
+
+
+/* *{
+  box-sizing: border-box;
+} */
+
+html,
+body{
+  background-color: #202225;
+  color: #FFFFFF !important;
+  scroll-behavior: smooth; 
+  font-size: 120%;
+}
+
+a{
+  text-decoration: none;
+
+}
+.w3-bar{
+  background-color: #40444B !important;
+  /* color: #FFFFFF; */
+  /* color: #2F3136; */
+  padding-left: 1%;
+}
+
+#intro{
+  position: absolute;
+  font-size: 150%;
+  background-color: #202225;
+
+}
+
+#aboutMe{
+  /* border-bottom: 5px solid #7289DA; */
+}
+#youLookNice{
+  /* padding-top: 2vh; */
+}
+
+#flavorSelf{
+  font-size: 200%;
+}
+
+#socialIcons{
+  font-size: 200%;
+}
+
+#rokuKeyboardImg, #dogFetchrImg, #escapeRoomImg{
+  width: 10vw;
+  height: 15vh;
+  border: solid white 3px;
+}
+
+#more {
+  display: none;
+}
+
+#showButton{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+
+  margin-bottom: 5vh;
+
+  /* margin-left: 20%; */
+  /* margin-right: auto; */
+  /* margin-bottom: 5vh; */
+}
+
+#resume{
+  /* font-size: 200%; */
+}
+
+#graphicDesign{
+  /* padding: 3%; */
+  background-color: #36393F;
+}
+
+#borderBottom, #aboutMe{
+  border-bottom: 5px solid #7289DA;
+}
+span{
+  font-weight: bold;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("../images/landingPage.jpg");
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("../images/rokuBoy.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("../images/pineconeDown.jpg");
+  min-height: 400px;
+  /* background-position: no-repeat; */
+  /* transform: rotate(90deg); */
+}
+
+.bgimg-4 {
+  background-image: url("../images/cafeSpace.jpg");
+  min-height: 400px;
+  /* transform: rotate(90deg); */
+}
+
+#contacts{
+  /* vertical-align: top; */
+  /* margin: 100px; */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  /* padding: 100px; */
+
+}
+
+#contactImg{
+  vertical-align: top;
+  padding-top: 0px;
+  display: inline-block;
+  margin-bottom: 15vh;
+}
+
+#contactImg{
+  width: 25vw;
+
+}
+
+#contactList {
+  /* vertical-align: middle; */
+  padding-left: 5%;
+  /* padding-top: 10%; */
+  display: inline-block !important;
+  /* height: 2vh; */
+  
+}
+
+h2{
+  display: inline-block;
+}
+
+
+#emptyDiv{
+  /* margin-bottom: 200px; */
+}
+
+/* grid */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+  
+  .div1 { grid-area: 1 / 1 / 2 / 2; }
+  .div2 { grid-area: 1 / 2 / 2 / 3; }
+  .div3 { grid-area: 1 / 3 / 2 / 4; }
+  .div4 { grid-area: 1 / 1 / 2 / 2; }
+  .div5 { grid-area: 1 / 2 / 2 / 3; }
+  .div6 { grid-area: 1 / 3 / 2 / 4; }
+
+
+
+
+/* relevant styles */
+
+#img__wrap {
+  /* font-size: 80%; */
+  /* display: flex; */
+  position: relative;
+  /* height: 200px; */
+  /* padding: 5vh, 2vw, 5vh, 2vw; */
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  /* margin-right: 2em;
+  margin-left: 2em; */
+  /* margin: 10vh, 5vw, 10vh, 5vw; */
+  /* width: 257px; */
+  /* display: inline-block; */
+}
+
+.img__description_layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2F3136;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: auto;
+  font-size: smaller;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+#img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+#img__description {
+  transition: .2s;
+  transform: translateY(1em);
+}
+
+#img__wrap:hover #img__description {
+  transform: translateY(0);
+}
+
+#footer{
+  /* background-color: #202225; */
+  padding-right: 1%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  /* padding-bottom: 5em; */
+}
+/* .w3-wide {letter-spacing: 10px;} */
+.w3-hover-opacity {cursor: pointer;}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-width: 650px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+
+  #intro{
+    position: absolute;
+    bottom:50vh;
+    right:50vw
+  }
+  #contacts {
+    margin-bottom: 100px;
+  }
+
+  #contactList{
+    padding-bottom: 22em;
+
+  }
+
+  #showButton{
+    display: flex;
+    justify-content: center;
+
+
+  
+    /* margin-left: 20%; */
+    /* margin-right: auto; */
+    /* margin-bottom: 5vh; */
+  }
+
+  
+  .portfolioIcon{
+    margin-top: 100px;
+  } 
+
+  #img__wrap {
+    padding-bottom: 3em;
+    padding-top: 2em;
+  }
+
+  #img__description_layer {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 4; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .div3 { grid-area: 3 / 1 / 4 / 2; }
+    .div4 { grid-area: 4 / 1 / 5 / 2; }
+    .div5 { grid-area: 5 / 1 / 6 / 2; }
+    .div6 { grid-area: 6 / 1 / 7 / 2; }
+    
+
+
+}
+

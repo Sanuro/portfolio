@@ -1,0 +1,318 @@
+<<!DOCTYPE html>
+<html>
+<title>Jaewon's Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/51d20c5746.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/portfolio.css') }}">
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="/#home" class="w3-bar-item w3-button">HOME</a>
+      <a href="/#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="/#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="/#contacts" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACTS</a>
+      <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"> -->
+      <!-- <i class="fa fa-search"></i> -->
+      </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-dark-grey w3-hide w3-hide-large w3-hide-medium">
+      <a href="/#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+      <a href="/#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="/#contacts" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACTS</a>
+      <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
+    </div>
+  </div>
+
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <div id="intro" class="w3-display-position w3-padding-large w3-xlarge w3-wide w3-animate-opacity"
+        style="bottom:15vh;right:15vw">Hello,<br> my name is Jaewon Lee</div>
+    </div>
+  </div>
+
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h1 id="aboutMe">About Me: Jaewon Lee</h1>
+    <!-- <p class="w3-center"><em>Experience Architecture</em></p> -->
+    <p>Well met! I originally studied computer science, but switched over to experience architecture(user
+      experience) after my internship as a UX Engineer. I loved the process of being able to plan and execute projects
+      while interacting with a diverse group of people which inspired me to pivot my career towards technoloy with a
+      mixture of human relationships.<br><br>
+      I have built iOS apps, a dog breed finder, a Unity game, and an easier on-screen keyboard that you can check out
+      in my project section and github! I'm excited to bring my innovative perspective to the team and make
+      lasting impacts on the projects I work on in the future.
+    </p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <p><b>
+            <!-- <i class="fa fa-user w3-margin-right"></i> -->
+            <!-- Jaewon Lee -->
+          </b></p><br>
+        <img id="youLookNice" src="{{ url_for('static', filename='images/youLookNice.jpg') }}" class="w3-round w3-image" alt="Photo of Me" width="500"
+          height="333">
+      </div>
+
+      <!-- Hide this text on small devices -->
+      <div id="flavorSelf" class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>I am an Experience Architect(UX) with a passion for technology.</p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Second Parallax Image with Portfolio Text -->
+
+  <div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">PROJECTS</span>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div class="w3-content w3-container w3-padding-64">
+    <br>
+
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-center parent">
+      <div class="div1" id="img__wrap">
+        <i class="fas fa-keyboard fa-2x"></i>
+        <h1>RokuKeyboard</h1>
+        <div class="w3-col portfolioIcon img__description_layer">
+          <a href="/rokuKeyboard">
+            <p id="img__description">On-screen keyboard made to type easier on screen using a remote. (html, css,
+              javascript, Vue.js)</p>
+            <!-- <img id="rokuKeyboardImg" src="../images/rokuKeyoardImg.jpg" alt="Roku Logo"> -->
+
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="div2" id="img__wrap">
+        <i class="fas fa-dog fa-2x"></i>
+        <h1>DogFetchr</h1>
+        <div class="w3-col portfolioIcon img__description_layer">
+          <a href="/dogFetchr">
+            <p id="img__description">iOS machine learning app indicating dog breed through pictures. (Swift, Microsoft
+              Azure API)
+            </p>
+            <!-- <img id="rokuKeyboardImg" src="../images/rokuKeyoardImg.jpg" alt="Roku Logo"> -->
+
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="div3" id="img__wrap">
+        <i class="fas fa-book fa-2x"></i>
+        <h1>Library Redsign</h1>
+        <div class="w3-col portfolioIcon img__description_layer">
+          <a href="/libraryRedesign" >
+            <p id="img__description">Redsign proposals of the MSU Library with clients. (Research/ interview/ 3D
+              modeling)
+            </p>
+            <!-- <img id="rokuKeyboardImg" src="../images/rokuKeyoardImg.jpg" alt="Roku Logo"> -->
+
+          </a>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <div id="dots"></div>
+
+
+  </div>
+
+  <div id="more">
+    <!-- Container #contacts Section) -->
+    <div class="w3-content w3-container w3-padding-64 ">
+      <div class="w3-center">
+        <!-- <h1 id="borderBottom">Graphic Design</h1><br> -->
+        <div class="w3-row-padding w3-center  parent">
+          <div class="div4" id="img__wrap">
+            <i class="fas fa-door-open fa-2x"></i>
+            <h1>Escape Room</h1>
+            <div class="w3-col portfolioIcon img__description_layer">
+              <a href="/escapeRoom" >
+                <p id="img__description">Unity game made with C++ and other technologies.
+                </p>
+                <!-- <img id="rokuKeyboardImg" src="../images/rokuKeyoardImg.jpg" alt="Roku Logo"> -->
+
+              </a>
+
+            </div>
+          </div>
+
+          <div class="div5" id="img__wrap">
+            <i class="fas fa-book-open fa-2x"></i>
+            <h1>Magazine</h1>
+            <div class="w3-col portfolioIcon img__description_layer">
+              <a href="/magazine" >
+                <p id="img__description">Design of magazines and with its contents.
+                </p>
+                <!-- <img id="rokuKeyboardImg" src="../images/rokuKeyoardImg.jpg" alt="Roku Logo"> -->
+
+              </a>
+
+            </div>
+          </div>
+
+          <div class="div6" id="img__wrap">
+            <i class="fas fa-user-tie fa-2x"></i>
+            <h1>Leadership</h1>
+            <div class="w3-col portfolioIcon img__description_layer">
+              <a href="/leadership" >
+                <p id="img__description">Facilitation activity with a group solving a real life problem.</p>
+                <!-- <img id="rokuKeyboardImg" src="../images/rokuKeyoardImg.jpg" alt="Roku Logo"> -->
+
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="showButton">
+    <button onclick="myFunction2()" id="myBtn">Show more</button>
+  </div>
+
+  <div class="bgimg-3 w3-display-container w3-opacity-min" id="contacts">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">CONTACTS</span>
+    </div>
+  </div>
+
+  <div class="w3-content">
+
+    <!-- <div class="w3-col m6 w3-padding-large">
+      <p><b> -->
+    <!-- <i class="fa fa-user w3-margin-right"></i> -->
+    <!-- Jaewon Lee -->
+    <!-- </b></p><br> -->
+    <img id="contactImg" src="{{ url_for('static', filename='images/lookUp.jpg') }}" class="w3-round w3-image w3-hide-small"
+      alt="Photo of Me for Contacts">
+    <!-- </div> -->
+
+    <!-- <div class="w3-col m8 w3-panel"> -->
+    <!-- <div id="contactList" class="w3-col m6 w3-padding-large"> -->
+    <div class="w3-large" id="contactList">
+
+      <a href="https://www.linkedin.com/in/j1lee/" target="_blank">
+        <i class="fab fa-4x fa-linkedin fa-fw w3-hover-text-gray w3-margin-right"></i>
+        <h2>Connect with me</h2><br><br>
+
+      </a>
+
+      <a href="https://github.com/sanuro" target="_blank"><i
+          class="fab fa-github-square fa-4x fa-fw w3-hover-text-gray w3-margin-right"></i>
+        <h2>Github: sanuro</h2>
+
+      </a><br><br>
+
+      <a href="mailto:leejaew7@msu.edu"><i class="fa fa-envelope fa-4x fa-fw w3-hover-text-gray w3-margin-right"></i>
+        <h2>leejaew7@msu.edu</h2>
+
+      </a><br><br>
+
+
+      <a href="https://drive.google.com/file/d/1VDRN5GRwJ9G9nFzE_vhXXlIT7DeKCwuk/view?usp=sharing" download="Jaewon Lee Résumé" target="_blank"><i
+          class="fas fa-4x fa-file-alt fa-fw w3-hover-text-gray  w3-margin-right"></i>
+        <h2>Resume</h2>
+        <br><br>
+
+      </a>
+      <!-- </div> -->
+    </div>
+
+  </div>
+
+
+  <div id="emptyDiv">
+    <!-- hello -->
+  </div>
+
+
+  <!-- Footer -->
+  <footer id="footer" class="w3-right w3-padding-64 w3-opacity">
+
+    <a href="#home" class="w3-button  w3-light-grey"><i class="fa fa-arrow-up w3-center"></i></a>
+
+  </footer>
+
+  <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+    // Change style of navbar on scroll
+    window.onscroll = function () { myFunction() };
+    function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        // navbar.className="w3-card w3-animate-top w3-dark-grey"
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-dark-grey";
+      } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-dark-grey", "");
+      }
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    //Read more, read less
+    function myFunction2() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Show more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Show less";
+        moreText.style.display = "inline";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

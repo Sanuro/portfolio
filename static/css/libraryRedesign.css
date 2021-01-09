@@ -1,0 +1,158 @@
+/* Jaewon's CSS for 210 portfolio */
+
+@import "compass/css3";
+
+
+/* *{
+  box-sizing: border-box;
+} */
+
+html,
+body{
+  background-color: #202225;
+  color: #FFFFFF !important;
+  scroll-behavior: smooth; 
+  font-size: 120%;
+  /* font-weight: 900; */
+  
+}
+
+
+.w3-bar{
+  background-color: #40444B !important;
+  /* color: #FFFFFF; */
+  /* color: #2F3136; */
+  padding-left: 1%;
+}
+
+#intro{
+  font-size: 150%;
+  background-color: #202225;
+}
+
+#about{
+  /* justify-content: center; */
+  /* text-align: center; */
+}
+
+#aboutMe{
+  /* border-bottom: 5px solid #7289DA; */
+}
+#youLookNice{
+  /* padding-top: 2vh; */
+}
+
+#consentImg{
+    display: flex;
+
+    width: 45%;
+    
+}
+#consentForm{
+    margin-right: 5%;
+}
+
+#floorPlan{
+  width: 90%;
+  margin-bottom: 5%;
+}
+
+#Model{
+  width: 90%;
+}
+
+iframe{
+  width: 90%;
+  height: 450px;
+  text-align: center;
+}
+
+#flavorSelf{
+  font-size: 200%;
+}
+
+#socialIcons{
+  font-size: 200%;
+}
+
+#resume{
+  /* font-size: 200%; */
+}
+
+#graphicDesign{
+  padding: 3%;
+  background-color: #36393F;
+}
+
+#borderBottom, #aboutMe{
+  border-bottom: 5px solid #43B581;
+}
+
+#aboutMeRoku{
+  border-bottom: 5px solid #FAA61A;
+}
+
+#aboutMeRoku3{
+  border-bottom: 5px solid #F04747;
+}
+
+span{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+p{
+  font-weight: 100;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("../images/landingPage.jpg");
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("../images/rokuBoy.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("../images/module.jpg");
+  min-height: 400px;
+  background-position: no-repeat;
+  /* transform: rotate(90deg); */
+}
+
+#footer{
+  /* background-color: #202225; */
+  padding-right: 1%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
