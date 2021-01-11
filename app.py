@@ -1,5 +1,7 @@
 from flask import Flask
 from flask import render_template
+import sched, time
+s = sched.scheduler(time.time, time.sleep)
 app = Flask(__name__)
 
 @app.route("/")
